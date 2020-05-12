@@ -12,8 +12,8 @@ const WelcomeText = styled.Text`
 `;
 
 const CustomImage = styled.Image`
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     margin: 50px;
 `;
 
@@ -27,6 +27,14 @@ const Home: FC<IHomeProps> = (props) => {
             <WelcomeText>Home Screen</WelcomeText>
             <CustomImage
                 source={require('../../src/assets/logo.png')}
+            />
+            <Button title="TodoList Screen" onPress={() => {
+                navigation.navigate('TodoList');
+            }}
+            />
+            <Button title="Gallery Screen" onPress={() => {
+                navigation.navigate('Gallery');
+            }}
             />
         </View>
     );
