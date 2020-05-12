@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons'; 
+import Colors from '../constans/Colors';
 
 import Home from '../screens/Home';
 import TodoList from '../screens/TodoList';
@@ -15,7 +16,7 @@ const BottomTabs: FC = () => {
         <Tab.Navigator
             initialRouteName="Home"
             tabBarOptions={{
-                activeTintColor: '#e91e63'
+                activeTintColor: Colors.red
             }}
         >
             <Tab.Screen
