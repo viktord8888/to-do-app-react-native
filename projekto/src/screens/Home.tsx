@@ -28,14 +28,6 @@ const Home: FC<IHomeProps> = (props) => {
             <CustomImage
                 source={require('../../src/assets/logo.png')}
             />
-            <Button title="TodoList Screen" onPress={() => {
-                navigation.navigate('TodoList');
-            }}
-            />
-            <Button title="Gallery Screen" onPress={() => {
-                navigation.navigate('Gallery');
-            }}
-            />
         </View>
     );
 };
