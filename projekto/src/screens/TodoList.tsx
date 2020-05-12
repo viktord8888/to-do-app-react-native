@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { 
     StyleSheet,
     Text,
@@ -7,6 +7,7 @@ import {
     ScrollView,
     TouchableOpacity
 } from 'react-native';
+import Colors from '../constans/Colors';
 
 import Note from '../components/Note';
 
@@ -23,7 +24,7 @@ interface State {
 }
 
 export default class TodoList extends React.Component<Props, State> {
-    constructor(props) {
+    constructor(props: Readonly<Props>) {
         super(props);
         this.state = {
             noteArray: [],
@@ -42,7 +43,7 @@ export default class TodoList extends React.Component<Props, State> {
             <View style={styles.container}>
             
                 <View style={styles.header}>
-                    <Text style={styles.headerText}>Todo List</Text>
+                    <Text style={styles.headerText}>TODO LIST</Text>
                 </View>
 
                 <ScrollView style={styles.scrollContainer}>
@@ -50,21 +51,20 @@ export default class TodoList extends React.Component<Props, State> {
                 </ScrollView>
 
                 <View style={styles.footer}>
-                    
                     <TextInput 
                         style={styles.textInput}
                         onChangeText={(noteText) => this.setState({noteText})}
                         value={this.state.noteText}
-                        placeholder='Write here'
+                        placeholder='Write here...'
                         placeholderTextColor='white'
                         underlineColorAndroid='transparent'>
                     </TextInput>
-
                 </View>
 
                 <TouchableOpacity onPress={ this.addNote.bind(this) } style={styles.addButton}>
                     <Text style={styles.addButtonText}>+</Text>
                 </TouchableOpacity>
+
             </View>
         );
     }
@@ -97,14 +97,14 @@ const styles = StyleSheet.create({
       flex: 1,
     },
     header: {
-      backgroundColor: '#681ee9',
+      backgroundColor: Colors.purple,
       alignItems: 'center',
       justifyContent: 'center',
       borderBottomWidth: 10,
-      borderBottomColor: '#ddd',
+      borderBottomColor: Colors.lightGrey,
     },
     headerText: {
-      color: 'black',
+      color: Colors.black,
       fontSize: 18,
       padding: 26,
     },
@@ -121,18 +121,18 @@ const styles = StyleSheet.create({
     },
     textInput: {
       alignSelf: 'stretch',
-      color: '#fff',
+      color: Colors.white,
       padding: 20,
-      backgroundColor: '#454545',
+      backgroundColor: Colors.grey,
       borderTopWidth: 2,
-      borderTopColor: '#ededed',
+      borderTopColor: Colors.lightGrey,
     },
     addButton: {
       position: 'absolute',
       zIndex: 10,
       right: 10,
       bottom: 77,
-      backgroundColor: '#1ee98e',
+      backgroundColor: Colors.green,
       width: 69,
       height: 69,
       borderRadius: 69,
@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
       elevation: 10,
     },
     addButtonText: {
-      color: '#8f8f8f',
+      color: Colors.grey,
       fontSize: 35,
     },
 });

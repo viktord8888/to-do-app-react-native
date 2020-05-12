@@ -1,9 +1,12 @@
-import React, { FC } from 'react';
-import { Button, View, Image, Text } from 'react-native';
+import React from 'react';
+import {
+    StyleSheet, 
+    View,
+    Text,
+    ScrollView
+ } from 'react-native';
 import styled from 'styled-components/native';
-import { useNavigation } from '@react-navigation/native';
-
-import Colors from '../../src/constans/Colors';
+import Colors from '../constans/Colors';
 
 const WelcomeText = styled.Text`
     margin: 120px 20px;
@@ -17,19 +20,48 @@ const CustomImage = styled.Image`
     margin: 50px;
 `;
 
-interface IHomeProps { }
+export default class Home extends React.Component{
 
-const Home: FC<IHomeProps> = (props) => {
-    const navigation = useNavigation();
+    render() {
+        return (
 
-    return (
-        <View>
-            <WelcomeText>Home Screen</WelcomeText>
-            <CustomImage
-                source={require('../../src/assets/logo.png')}
-            />
-        </View>
-    );
+            <View style={styles.container}>
+            
+                <View style={styles.header}>
+                    <Text style={styles.headerText}>HOME</Text>
+                </View>
+
+                <ScrollView style={styles.scrollContainer}>
+                </ScrollView>
+                
+                <WelcomeText>Home Screen</WelcomeText>
+                    <CustomImage
+                    source={require('../../src/assets/logo.png')}
+                />
+
+            </View>
+        );
+    }
 };
 
-export default Home;
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    header: {
+      backgroundColor: Colors.lightBlue,
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderBottomWidth: 10,
+      borderBottomColor: Colors.lightGrey,
+    },
+    headerText: {
+      color: Colors.black,
+      fontSize: 18,
+      padding: 26,
+    },
+    scrollContainer: {
+        flex: 1,
+        marginBottom: 100,
+    }
+});
