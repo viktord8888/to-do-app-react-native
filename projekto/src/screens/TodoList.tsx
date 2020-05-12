@@ -1,23 +1,147 @@
 import React, { FC } from 'react';
-import { Button, View } from 'react-native';
-import styled from 'styled-components/native';
+import { 
+    StyleSheet,
+    Text,
+    View,
+    TextInput,
+    ScrollView,
+    TouchableOpacity
+} from 'react-native';
 
-import Colors from '../../src/constans/Colors';
+import Note from '../components/Note';
 
-const WelcomeText = styled.Text`
-    margin: 120px 20px;
-    font-size: 16px;
-    color: ${Colors.black};
-`;
+interface Props {
+    keyVal: any;
+    key: any;
+    val: any;
+    deleteMethod: any;
+}
 
-interface ITodoListProps {}
+interface State {
+    noteArray: any,
+    noteText: string,
+}
 
-const TodoList = ({navigation}) => {
-    return (
-        <View>
-            <WelcomeText>TodoList Screen</WelcomeText>
-        </View>
-    );
-};
+export default class TodoList extends React.Component<Props, State> {
+    constructor(props) {
+        super(props);
+        this.state = {
+            noteArray: [],
+            noteText: ''
+        }
+    }
 
-export default TodoList;
+    render() {
+
+        let notes = this.state.noteArray.map((val: any, key: React.ReactText) => {
+            return <Note key={key} keyVal={key} val={val}
+                    deleteMethod={ ()=> this.deleteNote(key) } />
+        });
+
+        return (
+            <View style={styles.container}>
+            
+                <View style={styles.header}>
+                    <Text style={styles.headerText}>Todo List</Text>
+                </View>
+
+                <ScrollView style={styles.scrollContainer}>
+                    {notes}
+                </ScrollView>
+
+                <View style={styles.footer}>
+                    
+                    <TextInput 
+                        style={styles.textInput}
+                        onChangeText={(noteText) => this.setState({noteText})}
+                        value={this.state.noteText}
+                        placeholder='Write here'
+                        placeholderTextColor='white'
+                        underlineColorAndroid='transparent'>
+                    </TextInput>
+
+                </View>
+
+                <TouchableOpacity onPress={ this.addNote.bind(this) } style={styles.addButton}>
+                    <Text style={styles.addButtonText}>+</Text>
+                </TouchableOpacity>
+            </View>
+        );
+    }
+
+    addNote() {
+        
+        if (this.state.noteText) {
+
+            let d = new Date(Date.now());
+            this.state.noteArray.push({
+                'date': d.getFullYear() +
+                "/" + (d.getMonth() + 1) +
+                "/" + d.getDay(),
+                'note': this.state.noteText
+            });
+
+            this.setState( {noteArray: this.state.noteArray} )
+            this.setState( {noteText: ''} );
+        }
+    }
+
+    deleteNote(key: any) {
+        this.state.noteArray.splice(key, 1);
+        this.setState({ noteArray: this.state.noteArray})
+    }
+}
+
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+    },
+    header: {
+      backgroundColor: '#681ee9',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderBottomWidth: 10,
+      borderBottomColor: '#ddd',
+    },
+    headerText: {
+      color: 'black',
+      fontSize: 18,
+      padding: 26,
+    },
+    scrollContainer: {
+      flex: 1,
+      marginBottom: 100,
+    },
+    footer: {
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      right: 0,
+      zIndex: 10,
+    },
+    textInput: {
+      alignSelf: 'stretch',
+      color: '#fff',
+      padding: 20,
+      backgroundColor: '#454545',
+      borderTopWidth: 2,
+      borderTopColor: '#ededed',
+    },
+    addButton: {
+      position: 'absolute',
+      zIndex: 10,
+      right: 10,
+      bottom: 77,
+      backgroundColor: '#1ee98e',
+      width: 69,
+      height: 69,
+      borderRadius: 69,
+      alignItems: 'center',
+      justifyContent: 'center',
+      elevation: 10,
+    },
+    addButtonText: {
+      color: '#8f8f8f',
+      fontSize: 35,
+    },
+});
