@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
+import { Octicons } from '@expo/vector-icons'; 
 
 import Home from '../screens/Home';
 import TodoList from '../screens/TodoList';
@@ -33,7 +34,7 @@ const BottomTabs: FC = () => {
                 options={{
                     tabBarLabel: 'TodoList',
                     tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="ios-information" color={color} size={size} />
+                        <Octicons name="tasklist" color={color} size={size} />
                     )
                 }}
             />
