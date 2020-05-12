@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { 
     StyleSheet,
     Text,
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
       backgroundColor: Colors.purple,
       alignItems: 'center',
       justifyContent: 'center',
-      borderBottomWidth: 10,
+      borderBottomWidth: 5,
       borderBottomColor: Colors.lightGrey,
     },
     headerText: {

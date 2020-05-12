@@ -30,9 +30,6 @@ export default class Home extends React.Component{
                 <View style={styles.header}>
                     <Text style={styles.headerText}>HOME</Text>
                 </View>
-
-                <ScrollView style={styles.scrollContainer}>
-                </ScrollView>
                 
                 <WelcomeText>Home Screen</WelcomeText>
                     <CustomImage
@@ -52,7 +49,7 @@ const styles = StyleSheet.create({
       backgroundColor: Colors.lightBlue,
       alignItems: 'center',
       justifyContent: 'center',
-      borderBottomWidth: 10,
+      borderBottomWidth: 5,
       borderBottomColor: Colors.lightGrey,
     },
     headerText: {
