@@ -1,31 +1,31 @@
 import React, { FC } from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { Ionicons } from '@expo/vector-icons';
 import { Octicons } from '@expo/vector-icons'; 
-import Colors from '../constans/Colors';
+import Colors from '../constants/Colors';
 
-import Home from '../screens/Home';
-import TodoList from '../screens/TodoList';
-import Gallery from '../screens/Gallery';
+import Home from '../screens/HomeScreen/Home';
+import TodoList from '../screens/TodoListScreen/TodoList';
+import Gallery from '../screens/GalleryScreen/Gallery';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
 const BottomTabs: FC = () => {
 
     return (
         <Tab.Navigator
             initialRouteName="Home"
-            tabBarOptions={{
-                activeTintColor: Colors.red
-            }}
+            activeColor={Colors.white}
+            shifting
         >
             <Tab.Screen
                 name="Home"
                 component={Home}
                 options={{
                     tabBarLabel: 'Home',
-                    tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="ios-home" color={color} size={size} />
+                    tabBarColor: Colors.purple,
+                    tabBarIcon: ({ color }) => (
+                        <Ionicons name="ios-home" color={color} size={22} />
                     )
                 }}
             />
@@ -33,9 +33,10 @@ const BottomTabs: FC = () => {
                 name="TodoList"
                 component={TodoList}
                 options={{
-                    tabBarLabel: 'TodoList',
-                    tabBarIcon: ({ color, size }) => (
-                        <Octicons name="tasklist" color={color} size={size} />
+                    tabBarLabel: 'ToDo',
+                    tabBarColor: Colors.pink,
+                    tabBarIcon: ({ color }) => (
+                        <Octicons name="tasklist" color={color} size={22} />
                     )
                 }}
             />
@@ -44,8 +45,9 @@ const BottomTabs: FC = () => {
                 component={Gallery}
                 options={{
                     tabBarLabel: 'Gallery',
-                    tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="ios-photos" color={color} size={size} />
+                    tabBarColor: Colors.orange,
+                    tabBarIcon: ({ color }) => (
+                        <Ionicons name="ios-photos" color={color} size={22} />
                     )
                 }}
             />
