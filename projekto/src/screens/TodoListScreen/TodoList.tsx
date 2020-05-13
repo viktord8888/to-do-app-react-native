@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { 
     StyleSheet,
     Text,
@@ -7,9 +7,10 @@ import {
     ScrollView,
     TouchableOpacity
 } from 'react-native';
-import Colors from '../constans/Colors';
 
-import Note from '../components/Note';
+import Colors from '../../constants/Colors';
+
+import Note from './Note';
 
 interface Props {
     keyVal: any;
@@ -97,14 +98,14 @@ const styles = StyleSheet.create({
       flex: 1,
     },
     header: {
-      backgroundColor: Colors.purple,
+      backgroundColor: Colors.pink,
       alignItems: 'center',
       justifyContent: 'center',
-      borderBottomWidth: 5,
+      borderBottomWidth: 4,
       borderBottomColor: Colors.lightGrey,
     },
     headerText: {
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 18,
       padding: 26,
     },

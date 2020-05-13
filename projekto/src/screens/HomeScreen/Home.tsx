@@ -6,7 +6,7 @@ import {
     ScrollView
  } from 'react-native';
 import styled from 'styled-components/native';
-import Colors from '../constans/Colors';
+import Colors from '../../constants/Colors';
 
 const WelcomeText = styled.Text`
     margin: 120px 20px;
@@ -33,7 +33,7 @@ export default class Home extends React.Component{
                 
                 <WelcomeText>Home Screen</WelcomeText>
                     <CustomImage
-                    source={require('../../src/assets/logo.png')}
+                    source={require('../../assets/logo.png')}
                 />
 
             </View>
@@ -46,14 +46,14 @@ const styles = StyleSheet.create({
       flex: 1,
     },
     header: {
-      backgroundColor: Colors.lightBlue,
+      backgroundColor: Colors.purple,
       alignItems: 'center',
       justifyContent: 'center',
-      borderBottomWidth: 5,
+      borderBottomWidth: 4,
       borderBottomColor: Colors.lightGrey,
     },
     headerText: {
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 18,
       padding: 26,
     },

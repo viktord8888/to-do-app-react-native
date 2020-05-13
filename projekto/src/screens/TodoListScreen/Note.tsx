@@ -5,7 +5,7 @@ import {
     View,
     TouchableOpacity
 } from 'react-native';
-import Colors from '../constans/Colors';
+import Colors from '../../constants/Colors';
 
 interface Props {
     keyVal: any;
@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
     noteText: {
         paddingLeft: 20,
         borderLeftWidth: 10,
-        borderLeftColor: Colors.red,
+        borderLeftColor: Colors.green,
     },
     noteDelete: {
         position: 'absolute',
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Colors.blue,
+        backgroundColor: Colors.red,
         padding: 10,
         top: 10,
         bottom: 10,

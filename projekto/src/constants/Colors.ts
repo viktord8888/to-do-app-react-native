@@ -1,3 +1,5 @@
+import { pink100 } from "react-native-paper/lib/typescript/src/styles/colors";
+
 export default {
     white: '#FFF',
     black: '#000',
@@ -8,5 +10,7 @@ export default {
     lightGrey: '#ddd',
     green: '#1ee98e',
     red: '#e91e63',
-    yellow: '#edfd00'
+    yellow: '#edfd00',
+    orange: '#FFA500',
+    pink: '#FFC0CB'
 };

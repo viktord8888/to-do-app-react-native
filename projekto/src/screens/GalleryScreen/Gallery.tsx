@@ -3,10 +3,9 @@ import {
     StyleSheet, 
     View,
     Text,
-    ScrollView
  } from 'react-native';
 import styled from 'styled-components/native';
-import Colors from '../constans/Colors';
+import Colors from '../../constants/Colors';
 
 const FirstText = styled.Text`
     position: absolute;
@@ -100,27 +99,27 @@ export default class Home extends React.Component{
                 </View>
 
                 <FirstImage
-                    source={require('../../src/assets/bugattichiron.png')}
+                    source={require('../../assets/bugattichiron.png')}
                 />
                 <FirstText>Bugatti Chiron – supersamochód klasy wyższej produkowany pod francuską marką Bugatti od 2016 roku.</FirstText>
                 
                 <SecondImage
-                    source={require('../../src/assets/ferrarilaferrari.png')}
+                    source={require('../../assets/ferrarilaferrari.png')}
                 />
                 <SecondText>Ferrari LaFerrari – supersamochód segmentu F produkowany przez włoską markę Ferrari w latach 2013 – 2018.</SecondText>
 
                 <ThirdImage
-                    source={require('../../src/assets/koenigseggagera.png')}
+                    source={require('../../assets/koenigseggagera.png')}
                 />
                 <ThirdText>Koenigsegg Agera RS – supersamochód zaprojektowany przez szwedzką firmę Koenigsegg.</ThirdText>
 
                 <FourthImage
-                    source={require('../../src/assets/lamborghiniaventador.png')}
+                    source={require('../../assets/lamborghiniaventador.png')}
                 />
                 <FourthText>Lamborghini Aventador – supersamochód klasy wyższej produkowany pod włoską marką Lamborghini od 2011 roku.</FourthText>
 
                 <FifthImage
-                    source={require('../../src/assets/hennesseyvenom.png')}
+                    source={require('../../assets/hennesseyvenom.png')}
                 />
                 <FifthText>Hennessey Venom GT – supersamochód skonstruowany i zaprezentowany w 2010 przez amerykańską markę Hennessey.</FifthText>
             </View>
@@ -133,14 +132,14 @@ const styles = StyleSheet.create({
       flex: 1,
     },
     header: {
-      backgroundColor: Colors.yellow,
+      backgroundColor: Colors.orange,
       alignItems: 'center',
       justifyContent: 'center',
-      borderBottomWidth: 5,
+      borderBottomWidth: 4,
       borderBottomColor: Colors.lightGrey,
     },
     headerText: {
-      color: Colors.black,
+      color: Colors.white,
       fontSize: 18,
       padding: 26,
     },
