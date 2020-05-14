@@ -37,7 +37,7 @@ export default class TodoList extends React.Component<Props, State> {
 
         let notes = this.state.noteArray.map((val: any, key: React.ReactText) => {
             return <Note key={key} keyVal={key} val={val}
-                    deleteMethod={ ()=> this.deleteNote(key) } />
+                deleteMethod={ ()=> this.deleteNote(key) } />
         });
 
         return (
