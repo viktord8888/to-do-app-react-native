@@ -25,6 +25,8 @@ export default class Home extends React.Component{
 
                 <Name>Autor: Wiktor Dukacz</Name>
 
+                // TODO: biography
+
             </View>
         );
     }
@@ -48,7 +50,6 @@ const Name = styled.Text`
     width: 200px;
     height: 50px;
 `;
-
 
 const styles = StyleSheet.create({
     container: {
