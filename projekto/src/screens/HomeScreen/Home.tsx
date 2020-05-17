@@ -23,6 +23,15 @@ export default class Home extends React.Component{
 
                 <Name>Autor: Wiktor Dukacz</Name>
 
+                <SomeText>
+                Niźli Dunaju niepowiedziała kiedym szkody ciemnozieloném Rzekł szedł spokojniejszych Bezładnością skroń.
+                Bór izby dnia oczu rogi Nilu niezdradzić angielskiéj tylu złotogłów nowo.
+                Marszałkowską alkowy Przysiągłbyś Wojski sprawa blachy dowoli ciemnozieloném Dojeżdżaczowi niepowiedziała twarze.
+                Trąby młody pomrok gazety. 
+                Byłem ogrodu Przedstawiając sejmik Przysiągłbyś Dojeżdżaczowi Worończańskim wojsku bezprzykładną murach żwawo mylił osobna. 
+                Zwrócona Chart Latem Łowczego Szmer więdliny pajęczą wzdychać śmietana Musim koło. 
+                </SomeText>
+
             </View>
         );
     }
@@ -46,6 +55,17 @@ const Name = styled.Text`
     width: 200px;
     height: 50px;
 `;
+
+const SomeText = styled.Text`
+    position: absolute;
+    font-size: 18px;
+    top: 375px;
+    text-align: center;
+    width: 360px;
+    height: 300px;
+    border: 2px solid grey;
+`;
+
 
 const styles = StyleSheet.create({
     container: {
