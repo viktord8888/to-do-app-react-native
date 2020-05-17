@@ -92,7 +92,7 @@ const FirstImage = styled.Image`
 const SecondText = styled.Text`
     position: absolute;
     top: 140px;
-    left: 0px;
+    left: 5px;
     width: 200px;
     height: 85px;
 `;
@@ -124,7 +124,7 @@ const ThirdImage = styled.Image`
 const FourthText = styled.Text`
     position: absolute;
     top: 410px;
-    left: 0px;
+    left: 5px;
     width: 200px;
     height: 80px;
 `;
@@ -140,7 +140,7 @@ const FourthImage = styled.Image`
 const FifthText = styled.Text`
     position: absolute;
     top: 550px;
-    right: 0px;
+    right: 5px;
     width: 200px;
     height: 83px;
 `;
@@ -156,7 +156,7 @@ const FifthImage = styled.Image`
 const SixthText = styled.Text`
     position: absolute;
     top: 710px;
-    left: 0px;
+    left: 5px;
     width: 200px;
     height: 83px;
 `;
@@ -188,7 +188,7 @@ const SeventhImage = styled.Image`
 const EightText = styled.Text`
     position: absolute;
     top: 975px;
-    left: 0px;
+    left: 5px;
     width: 200px;
     height: 83px;
 `;
