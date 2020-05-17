@@ -43,7 +43,8 @@ const Avatar = styled.Image`
     left: 23px;
     width: 150px;
     height: 150px;
-    border: 3px solid green;
+    border-color: green;
+    border-width: 3px;
     border-radius: 75px;
 `;
 
@@ -63,7 +64,8 @@ const SomeText = styled.Text`
     text-align: center;
     width: 360px;
     height: 300px;
-    border: 2px solid grey;
+    border-width: 2px;
+    border-color: grey;
 `;
 
 
