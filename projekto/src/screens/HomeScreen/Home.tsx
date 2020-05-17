@@ -2,8 +2,7 @@ import React from 'react';
 import {
     StyleSheet, 
     View,
-    Text,
-    ScrollView
+    Text
  } from 'react-native';
 import styled from 'styled-components/native';
 import Colors from '../../constants/Colors';
@@ -19,13 +18,10 @@ export default class Home extends React.Component{
                     <Text style={styles.headerText}>HOME</Text>
                 </View>
                 
-                <Avatar
-                    source={require('../../assets/avatar.png')}
+                <Avatar source={require('../../assets/avatar.png')}
                 />
 
                 <Name>Autor: Wiktor Dukacz</Name>
-
-                // TODO: biography
 
             </View>
         );
