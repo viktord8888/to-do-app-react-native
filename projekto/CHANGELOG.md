@@ -1,7 +1,7 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
-## [1.0.0] - 2020-03-01
+## [1.0.0] - 2020-03-05
 
 ### Changes
 
@@ -12,7 +12,7 @@ All notable changes to this project will be documented in this file.
     - Initial app config
 
 
-## [1.1.0] - 2020-03-05
+## [1.1.0] - 2020-03-08
 
 ### Changes
 
