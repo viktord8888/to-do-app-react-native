@@ -36,12 +36,10 @@ const styles = StyleSheet.create({
         padding: 20,
         paddingRight:50,
         borderBottomWidth: 2,
-        borderBottomColor: Colors.lightGrey,
+        borderBottomColor: Colors.lightGrey
     },
     noteText: {
-        paddingLeft: 20,
-        borderLeftWidth: 10,
-        borderLeftColor: Colors.green,
+        paddingLeft: 1,
     },
     noteDelete: {
         position: 'absolute',

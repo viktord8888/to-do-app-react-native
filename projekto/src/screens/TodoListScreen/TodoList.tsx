@@ -78,8 +78,8 @@ export default class TodoList extends React.Component<Props, State> {
             let d = new Date(Date.now());
             this.state.noteArray.push({
                 'date': ('0' + d.getDate()).slice(-2) +
-                "/" + months[(d.getMonth())] +
-                "/" + d.getFullYear() +
+                "-" + months[(d.getMonth())] +
+                "-" + d.getFullYear() +
                 "                                   " + 
                 ('0' + d.getHours()).slice(-2) + ":" + 
                 ('0' + d.getMinutes()).slice(-2) + ":" + 
